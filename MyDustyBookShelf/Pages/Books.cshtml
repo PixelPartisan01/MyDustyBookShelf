@@ -1,0 +1,37 @@
+﻿@page
+@using MyDustyBookShelf.Models
+@model MyDustyBookShelf.Pages.BooksModel
+@{
+
+	<h1>Books</h1>
+	<form method="post">
+		<input type="number" name="ISBN" />
+		<input type="text" name="Title" />
+		<input type="text" name="Author" />
+		<input type="text" name="Series" />
+
+		<button type="submit">Add</button>
+	</form>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ISBN</th>
+				<th>Author</th>
+				<th>Title</th>
+				<th>Series</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Book book in Model.Books)
+			{
+				<tr>
+					<td>@book.Id</td>
+					<td>@book.Author</td>
+					<td>@book.Title</td>
+					<td>@book.Series</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

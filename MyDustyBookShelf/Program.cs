@@ -1,3 +1,5 @@
+using MyDustyBookShelf.Models;
+
 namespace MyDustyBookShelf
 {
     public class Program
@@ -8,6 +10,8 @@ namespace MyDustyBookShelf
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            builder.Services.AddDbContext<BookDBContext>();
 
             var app = builder.Build();
 

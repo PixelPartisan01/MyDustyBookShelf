@@ -16,5 +16,10 @@ namespace MyDustyBookShelf.Pages
         {
 
         }
+
+        public void OnPost()
+        {
+
+        }
     }
 }
